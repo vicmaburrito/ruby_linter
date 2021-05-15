@@ -1,6 +1,13 @@
-# Ruby Linter
+# RUBY LINTER
 
->  A custom linter for ruby files! is a Ruby code style checker, Apart from reporting problems in your code. In this project, we passed an argument(file path) from the command line to our executable for example "ruby ./bin/main.rb bad_code.rb"  file and go through the file line by line to detect some predetermined ruby offenses.
+>  A custom linter for ruby files! is a Ruby code style checker, Apart from reporting problems in your code. In this project, we passed an argument(file path) from the command line to our executable for example
+"ruby ./bin/main.rb bad_code.rb" file and go through the file line by line to detect some predetermined ruby offenses.
+
+## RUNNING APP
+
+   **GOOD CODE**
+
+![screenshot](assets/Bad_code.png)
 
 ## NECESSARY REQUIREMENTS
 
@@ -16,17 +23,17 @@
 - open the downloaded repository with vscode. 
 - Run the command `$ ruby ruby ./bin/main.rb ./folder/your_file.rb`
 
-## Built With
+## BUILT WITH
 
 - Ruby
 
-## Testing
+## TESTING
 
 - clone the repository `$ git clone https://github.com/vicmaburrito/ruby_linter.git`
 - at the root level of the project run the command `rspec`
 - see test results in the terminal
 
-## Author
+## AUTHOR
 
 👤 **Manuel Aldaraca**
 
@@ -37,12 +44,12 @@
 ## SHOW YOUR SUPPORT
 Give a \* if you like the project
 
-## 🤝 Contributing
+## 🤝 CONTRIBUTING
 - Contributions, issues, and feature requests are welcome!
 Feel free to check the issues page. Show your support
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+## ACKNOWLEDGMENTS
 
 - Ruby Capstone Project by Microverse.
 
