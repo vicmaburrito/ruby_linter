@@ -7,6 +7,18 @@
 
    **GOOD CODE**
 
+![screenshot](assets/Good_code.png)
+
+   **BAD CODE**
+
+![screenshot](assets/Bad_code.png)
+
+   **EMPTY FILE**
+
+![screenshot](assets/Empty_file.png)
+
+   **WRONG EXTENSION**
+
 ![screenshot](assets/Bad_code.png)
 
 ## NECESSARY REQUIREMENTS
