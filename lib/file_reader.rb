@@ -10,4 +10,4 @@ class FileReader
     @lines = []
     puts "There's a problem with the path you provide #{e}".colorize(:red)
   end
-    end
+end
