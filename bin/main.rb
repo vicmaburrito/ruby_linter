@@ -7,5 +7,5 @@ if !msg.errors.empty?
   puts msg.errors
   puts "this file contains #{msg.line_number} lines of code".colorize(:yellow)
 else
-  puts 'no offenses detected'.colorize(:green)
+  puts ".\n.\nno offenses detected".colorize(:green)
 end
