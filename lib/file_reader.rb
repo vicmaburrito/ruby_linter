@@ -10,7 +10,8 @@ class FileReader
     @lines = []
     puts "\nThere's a problem with the path you provide #{e}".colorize(:red)
     if File.extname(file_path) != '.rb'
-      puts "#{file_path}".colorize(:color => :white, :background => :red ) + " is not a ruby file. please select a file with extension .rb"
+      puts file_path.to_s.colorize(color: :white, background: :red) + "is not a ruby file.
+      please select a file with extension .rb"
     end
   end
 end
