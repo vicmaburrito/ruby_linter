@@ -5,7 +5,8 @@ msg = TestingFiles.new(ARGV.first)
 msg.results
 if !msg.errors.empty?
   puts msg.errors
-  puts "this file contains #{msg.line_number} lines of code".colorize(:yellow)
+  puts msg.line_number.to_s + ' lines of code inspected'.colorize(:yellow) + ', ' + msg.errors_number.to_s + ' ' +
+       'offenses'.colorize(:red) + ' ' + 'detected'
 else
-  puts ".\n.\nno offenses detected".colorize(:green)
+  puts ".\nno" + ' ' + 'offenses'.colorize(:green) + ' ' + 'detected'
 end

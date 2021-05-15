@@ -5,7 +5,7 @@ class FileReader
     @file_path = file_path
     @lines = File.readlines(@file_path)
     @line_number = @lines.size
-    puts "\nFile read sucessfully\n.\n.\n.".colorize(:green)
+    puts "File read sucessfully\n.\n.".colorize(:green)
     puts file_path.to_s.colorize(color: :white, background: :red) + ' ' + 'is an empty file' if File.empty?(file_path)
   rescue StandardError => e
     @lines = []
