@@ -2,7 +2,7 @@ require 'colorize'
 require_relative 'file_reader'
 
 class TestingFiles
-  attr_reader :file, :lines, :line_number, :errors
+  attr_reader :file, :lines, :line_number, :errors, :errors_number
 
   def initialize(file_path)
     @file_path = file_path
@@ -10,6 +10,7 @@ class TestingFiles
     @lines = @file.lines
     @line_number = @file.line_number
     @errors = []
+    @errors_number = @errors.length
   end
 
   def results
@@ -20,10 +21,12 @@ class TestingFiles
 
   def test_camelcase
     @lines.each_with_index do |line, line_num|
-      if line.match(/class\b/) && !line.match(/\b[A-Z]/)
-        message_error = "#{@file_path}: in line:#{line_num + 1} use CamelCase after class keyword".colorize(:red)
-        @errors << message_error
-      end
+      next unless line.match(/class\b/) && !line.match(/\b[A-Z]/)
+
+      message_error = @file_path.to_s.colorize(:light_blue) +
+                      ": in line:#{line_num + 1}" + ' E: '.colorize(:yellow) + 'Use CamelCase after class keyword'
+      @errors << message_error
+      @errors_number = @errors.length
     end
   end
 end
