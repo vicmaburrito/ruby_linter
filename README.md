@@ -33,7 +33,7 @@
 - cd ruby_linter
 - code . in the terminal
 - open the downloaded repository with vscode. 
-- Run the command `$ ruby ruby ./bin/main.rb ./folder/your_file.rb`
+- Run the command `$ ruby ./bin/main.rb ./folder/your_file.rb`
 
 ## BUILT WITH
 
