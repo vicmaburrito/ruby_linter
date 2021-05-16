@@ -25,8 +25,8 @@ class TestingFiles
     @lines.each_with_index do |line, line_num|
       next unless line.match(/class\b/) && !line.match(/\b[A-Z]/)
 
-      message_error = @file_path.to_s.colorize(:light_blue) +
-                      ": in line:#{line_num + 1}" + ' E: '.colorize(:yellow) + 'Use CamelCase after class keyword'
+      message_error = "#{@file_path.uncolorize} : in line:#{line_num + 1}
+#{' E: '.yellow}: Use CamelCase after class keyword"
       @errors << message_error
       @errors_number += 1
     end
