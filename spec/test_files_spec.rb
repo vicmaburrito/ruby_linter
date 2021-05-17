@@ -1,4 +1,5 @@
 require_relative '../lib/test_files'
+require 'colorize'
 
 describe TestingFiles do
   path = File.absolute_path('../ruby_linter/Example_files/good_code.rb')
