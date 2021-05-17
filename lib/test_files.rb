@@ -1,6 +1,5 @@
 require 'colorize'
 require_relative 'file_reader'
-require 'strscan'
 
 class TestingFiles
   attr_reader :file, :lines, :line_number, :errors, :errors_number
@@ -17,6 +16,7 @@ class TestingFiles
   def results
     test_camelcase
     line_length
+    space_methods
   end
 
   private
@@ -38,6 +38,17 @@ class TestingFiles
 
       message_error = "#{@file_path.to_s.light_blue}: in line:#{line_num + 1}
 #{'E:'.yellow} Line is too long. [#{line.length}/120]"
+      @errors << message_error
+      @errors_number += 1
+    end
+  end
+
+  def space_methods
+    @lines.each_with_index do |line, line_num|
+      next unless line.match(/def\b/) && !@lines[line_num - 1].strip.empty?
+
+      message_error = "#{@file_path.to_s.light_blue}: in line:#{line_num + 1}
+#{'E:'.yellow} Expected empty line before def keyword"
       @errors << message_error
       @errors_number += 1
     end
