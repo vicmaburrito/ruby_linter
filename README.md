@@ -11,7 +11,7 @@
 
    **BAD CODE**
 
-![screenshot](assets/Bad_code.png)
+![screenshot](assets/bad_code_up.png)
 
    **EMPTY FILE**
 
@@ -51,7 +51,7 @@
 
 - GitHub: [@vicmaburrito](https://github.com/vicmaburrito)
 - Twitter: [@ManuelAldaraca](https://twitter.com/ManuelAldaraca)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/manuel-aldaraca/)
+- LinkedIn: [Manuel Aldaraca](https://www.linkedin.com/in/manuel-aldaraca/)
 
 ## SHOW YOUR SUPPORT
 Give a \* if you like the project
