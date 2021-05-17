@@ -3,6 +3,7 @@ AllCops:
     - "Guardfile"
     - "Rakefile"
     - "bad_code.rb"
+    - "empty_file.rb"
   DisplayCopNames: true
 
 Layout/LineLength:
