@@ -2,8 +2,8 @@ AllCops:
   Exclude:
     - "Guardfile"
     - "Rakefile"
-    - "bad_code.rb"
-    - "empty_file.rb"
+    - "../ruby_linter/Example_files/bad_code.rb"
+    - "../ruby_linter/Example_files/empty_file.rb"
   DisplayCopNames: true
 
 Layout/LineLength:
