@@ -19,7 +19,7 @@
 
    **WRONG EXTENSION**
 
-![screenshot](assets/Bad_code.png)
+![screenshot](assets/Extension.rb.png)
 
 ## NECESSARY REQUIREMENTS
 
