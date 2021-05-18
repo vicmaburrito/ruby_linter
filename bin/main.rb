@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+require 'colorize'
 require_relative '../lib/test_files'
 
 msg = TestingFiles.new(ARGV.first)
