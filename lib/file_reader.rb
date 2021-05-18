@@ -5,13 +5,13 @@ class FileReader
     @file_path = file_path
     @lines = File.readlines(@file_path)
     @line_number = @lines.size
-    puts "File was read sucessfully\n.\n.".colorize(:green)
-    puts "#{file_path.to_s.red} is an empty file" if File.empty?(file_path)
+    puts "File was read sucessfully\n.\n."
+    puts "#{file_path.to_s} is an empty file" if File.empty?(file_path)
   rescue StandardError => e
     @lines = []
-    puts "There's a problem with the path you provide #{e}".colorize(:red)
+    puts "There's a problem with the path you provide #{e}"
     if File.extname(file_path) != '.rb'
-      puts ".\n#{file_path.to_s.red} is not a ruby file please select a file with extension .rb"
+      puts ".\n#{file_path.to_s} is not a ruby file please select a file with extension .rb"
     end
   end
 end

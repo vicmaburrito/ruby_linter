@@ -1,4 +1,3 @@
-require 'colorize'
 require_relative 'file_reader'
 
 class TestingFiles
@@ -25,8 +24,8 @@ class TestingFiles
     @lines.each_with_index do |line, line_num|
       next unless line.match(/class\b/) && !line.match(/\b[A-Z]/)
 
-      message_error = "#{@file_path.to_s.light_blue}: in line:#{line_num + 1}
-#{'E:'.yellow} Use CamelCase after class keyword"
+      message_error = "#{@file_path.to_s}: in line:#{line_num + 1}
+#{'E:'} Use CamelCase after class keyword"
       @errors << message_error
       @errors_number += 1
     end
@@ -36,8 +35,8 @@ class TestingFiles
     @lines.each_with_index do |line, line_num|
       next unless line.length > 120
 
-      message_error = "#{@file_path.to_s.light_blue}: in line:#{line_num + 1}
-#{'E:'.yellow} Line is too long. [#{line.length}/120]"
+      message_error = "#{@file_path.to_s}: in line:#{line_num + 1}
+#{'E:'} Line is too long. [#{line.length}/120]"
       @errors << message_error
       @errors_number += 1
     end
@@ -47,8 +46,8 @@ class TestingFiles
     @lines.each_with_index do |line, line_num|
       next unless line.match(/def\b/) && !@lines[line_num - 1].strip.empty?
 
-      message_error = "#{@file_path.to_s.light_blue}: in line:#{line_num + 1}
-#{'E:'.yellow} Expected empty line before def keyword"
+      message_error = "#{@file_path.to_s}: in line:#{line_num + 1}
+#{'E:'} Expected empty line before def keyword"
       @errors << message_error
       @errors_number += 1
     end
