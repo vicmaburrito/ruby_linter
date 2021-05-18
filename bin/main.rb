@@ -5,8 +5,8 @@ msg = TestingFiles.new(ARGV.first)
 msg.results
 if !msg.errors.empty?
   puts msg.errors
-  puts "#{msg.line_number.to_s} #{'lines of code inspected'}
-#{msg.errors_number.to_s} #{'offenses'} #{'detected'}"
+  puts "#{msg.line_number} lines of code inspected
+#{msg.errors_number} offenses detected"
 else
-  puts ".\nno #{'offenses'} detected"
+  puts ".\nno offenses detected"
 end
